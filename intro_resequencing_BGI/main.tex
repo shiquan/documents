@@ -1,17 +1,109 @@
-\documentclass[]{beamer}
+\documentclass[12pt]{beamer}
 \usepackage{inputenc}
-\usepackage[fallback]{xeCJK}
-%\setCJKmainfont{HAN NOM A}
-%\setCJKfallbackfamilyfont{rm}{HAN NOM B}
+\usepackage{varwidth}
+\usepackage{xcolor}
+\definecolor{colora}{RGB}{214,76,71}
+\definecolor{colorg}{RGB}{84,175,216}
+\definecolor{colort}{RGB}{98,174,17}
+\definecolor{colorc}{RGB}{253,205,103}
+\definecolor{colorn}{RGB}{ 45,45,45}
+\definecolor{colord}{RGB}{ 44,46,255}
+\definecolor{colorb}{RGB}{ 14,41,89}
+\definecolor{colori}{RGB}{255,44,45}
 
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds}
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+\tikzstyle{block} = [dashed, ultra thick, align=left, rounded corners, text width = \textwidth, draw=black!50, top color=white, font=\ttfamily]
+
+\usepackage[fallback]{xeCJK}
+\setCJKmainfont{STHeiti}
+%\setCJKfallbackfamilyfont{rm}{SXHeiti}
+%\setbeamertemplate{sections in toc}[circle]
+
+\usecolortheme[named=colorb]{structure}
+\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{itemize items}[triangle]
 %\usetheme{metropolis}
-\title{全基因组与目标区域重测序数据分析}
-\author{}
-\institute{}
+\title{\huge{全基因组与目标区域重测序数据分析}}
+\author{石\ 泉\\shiquan@genomics.cn\\https://github.com/shiquan}
+\institute{\large{华大基因研究院}}
 \date{}
 \begin{document}
-\maketitle
+\frame{\titlepage}
+\begin{frame}{前言}
+  \tikz \node[block]{本文档为华大学院组织培训《全基因组与目标区域重测序数据
+        分析》课程授课课件与相关学习文档。参考文献见各页面底部，
+      请点击进去。转载请注明出处。为了保证学习讨论效果，进入本课程
+      学习讨论前，请先复习以下内容。};
+ \begin{columns}
+ \begin{column}{0.35\textwidth}
+ \begin{itemize}
+ \item 生物基础 \tikz[na] \coordinate (l-i1);
+ \item 测序原理 \tikz[na] \coordinate (l-i2);
+ \item Linux操作基础 \tikz[na] \coordinate (l-i3);
+ \end{itemize}
+ \end{column}
+ \begin{column}{0.65\textwidth}
+ \begin{itemize}
+\item \tikz \coordinate (r-i1); 中心法则（center dogma）
+\item \tikz \coordinate (r-i2); DNA packaging 
+\item \tikz \coordinate (r-i3); cDNA, noncoding RNA 
+\item \tikz \coordinate (r-i4); 读长（reads），接头（adaptor） 
+\item \tikz \coordinate (r-i5); barcoding 
+\item \tikz \coordinate (r-i6); 解压压缩包 
+\item \tikz \coordinate (r-i7); GNU Make，GCC 
+ \end{itemize}
+ \end{column}
+ \end{columns}
+ \begin{tikzpicture}[overlay]
+ \path[->,colora,ultra thick] (l-i1) edge [bend left] (r-i1);
+ \path[->,colora,ultra thick] (l-i1) edge [bend left] (r-i2);
+ \path[->,colora,ultra thick] (l-i1) edge [bend left] (r-i3);
+ \path[->,colorc,ultra thick] (l-i2) edge [bend left] (r-i4);
+ \path[->,colorc,ultra thick] (l-i2) edge [bend left] (r-i5);
+ \path[->,colorn,ultra thick] (l-i3) edge [out=0, in=-90] (r-i6);
+ \path[->,colorn,ultra thick] (l-i3) edge [out=0, in=-90] (r-i7);
+ \end{tikzpicture}
+ \end{frame}
 \begin{frame}
-  
+ \tableofcontents
+ \end{frame}
+
+\section{什么是重测序？}
+\begin{frame}\frametitle{什么是重测序？}
   \end{frame}
+\section{为什么进行重测序？}
+\begin{frame}\frametitle{为什么进行重测序？}
+  \end{frame}
+
+\begin{frame}\frametitle{研究遗传性状（表型）的一般步骤}
+  \end{frame}
+
+\section{如何进行重测序？}
+\begin{frame}\frametitle{如何进行重测序？}
+  \end{frame}
+
+\section{为什么重测序的工作中也需要组装技术？}
+\begin{frame}\frametitle{为什么重测序的工作中也需要组装技术？}
+  \end{frame}
+
+
+\section{测序分析流程回顾}
+
+\begin{frame}\frametitle{测序分析流程回顾如}
+  \end{frame}
+
+\section{案例分享}
+\begin{frame}\frametitle{案例分享}
+  \end{frame}
+
+\section{研究思路与整体流程回顾}
+\begin{frame}\frametitle{研究思路与整体流程回顾}
+  \end{frame}
+
+\begin{frame}
+ 
+\end{frame}
 \end{document}
