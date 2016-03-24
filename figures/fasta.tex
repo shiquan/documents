@@ -1,0 +1,57 @@
+\documentclass[tikz, 10pt]{standalone}
+
+\usepackage{xcolor}
+\definecolor{colora}{RGB}{214,76,71}
+\definecolor{colorg}{RGB}{84,175,216}
+\definecolor{colort}{RGB}{98,174,17}
+\definecolor{colorc}{RGB}{253,205,103}
+\definecolor{colorn}{RGB}{ 45,45,45}
+\definecolor{colord}{RGB}{ 44,46,255}
+\definecolor{colorb}{RGB}{ 14,41,89}
+\definecolor{colori}{RGB}{255,44,45}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,shadows,calc,decorations.pathreplacing}
+
+\tikzstyle{blockA} = [rectangle, fill=colora, draw=black, ultra thick, rounded corners, drop shadow, text=white]
+\tikzstyle{blockC} = [fill=colorc, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockG} = [fill=colorg, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockT} = [fill=colort, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockN} = [fill=colorn, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockd} = [fill=colord, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockb} = [fill=colorb, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blocki} = [fill=colori, draw=black, ultra thick, rounded corners, drop shadow]
+
+
+\tikzstyle{circleA} = [circle, inner color = colora!20, outer color=colora, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleC} = [circle, inner color = colorc!20, outer color=colorc, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleG} = [circle, inner color = colorg!20, outer color=colorg, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleT} = [circle, inner color = colort!20, outer color=colort, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleN} = [circle, inner color = colorn!20, outer color=colorn, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circled} = [circle, inner color = colord!20, outer color=colord, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleb} = [circle, inner color = colorb!20, outer color=colorb, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circlei} = [circle, inner color = colori!20, outer color=colori, draw=black, ultra thick, rounded corners, drop shadow]
+
+\pgfmathdeclarerandomlist{randomColors}{
+  {colora}
+  {colorc}
+  {colorg}
+  {colort}
+}
+
+\pgfmathdeclarerandomlist{randomBlocks}{
+  {blockA}
+  {blockC}
+  {blockG}
+  {blockT}
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \foreach \x in {0, 0.5, ..., 10 }
+  \node[blockA] at (\x, 0) {A};
+
+\end{tikzpicture}
+
+\end{document}

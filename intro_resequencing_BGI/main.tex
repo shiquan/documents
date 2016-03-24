@@ -715,7 +715,7 @@ FASTQ文件各行条目含义:
 \end{frame}
 \begin{frame}\frametitle{HGVS命名}
     \includegraphics[width=\textwidth]{figures/old_slides/hgvs.png}  
-  \end{frame}
+\end{frame}
 \begin{frame}\frametitle{变异注释}
   \includegraphics[width=\textwidth]{figures/old_slides/anno1.png}  
 \end{frame}
@@ -732,6 +732,10 @@ FASTQ文件各行条目含义:
   \includegraphics[width=\textwidth]{figures/old_slides/anno4.png}  
 \end{frame}
 
+\begin{frame}\frametitle{ACMG突变致病性预测指南}
+  \includegraphics[width=\textwidth]{figures/acmg.png}  
+\end{frame}
+
 \begin{frame}\frametitle{上机：注释}
   \small{
   \begin{itemize}
@@ -744,8 +748,15 @@ FASTQ文件各行条目含义:
 \begin{frame}\frametitle{ENCODE}
   \includegraphics[width=\textwidth]{figures/encode.png}  
 \end{frame}
+
+\begin{frame}
+  \includegraphics[width=\textwidth]{figures/birney.jpg}  
+\end{frame}
+
+
 \section{案例分享}
 \begin{frame}\frametitle{案例分享}
+  \includegraphics[width=\textwidth]{figures/sequencer.pdf}    
   \begin{itemize}
   \item DMD检测项目；
   \item 耳聋筛查项目；
@@ -826,7 +837,32 @@ FASTQ文件各行条目含义:
 \end{itemize}
 
 \end{frame}
+\begin{frame}\frametitle{常用生物信息工具介绍}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      分析工具：
+      \begin{itemize}
+      \item 比对：bwa，blast，blat 等等
+      \item 质控：fastQC，bamdst，picard
+      \item 变异：GATK系列，SOAP系列，Platyus
+      \item 组装：SPAdes，SOAPdenovo等等
+      \item Bioconductor
+      \end{itemize}
+    \end{column}
 
+    \begin{column}{0.5\textwidth}
+      开发工具：
+      \begin{itemize}
+      \item HTSlib
+      \item bioperl／biopython
+      \item SeqAn＋＋
+      \item NCBI C++ lib
+      \end{itemize}
+    \end{column}
+    
+    \end{columns}
+  
+  \end{frame}
 \begin{frame}
   \begin{columns}
     \begin{column}{0.5\textwidth}

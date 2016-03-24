@@ -1,0 +1,44 @@
+\documentclass[tikz,12pt]{standalone}
+
+\usetikzlibrary{positioning,arrows,shapes,backgrounds,shadows}
+\begin{document}
+
+
+\begin{tikzpicture}[scale=.9,every node/.style={minimum size=1cm},on grid]
+
+  \begin{scope}[xshift=-6cm]
+    \fill[white,fill opacity=0.6] (0,0) rectangle (5,5);
+    \draw[black, dashed, ultra thick] (0,0) rectangle (5,5);
+    \node[anchor=south, inner sep = 0]  at (2.5,0) {\includegraphics[width=4.5cm]{sang64.png}};
+  \end{scope} 
+
+  
+  \begin{scope}[xshift=0cm]
+    \fill[white,fill opacity=0.9] (0,0) rectangle (5,5);
+    \draw[black, dashed, ultra thick] (0,0) rectangle (5,5);
+    \node[anchor=south, inner sep = 0]  at (2.5,0) {\includegraphics[width=4.5cm]{illu64.png}};
+  \end{scope}
+
+  \begin{scope}[xshift=6cm]
+    \fill[white,fill opacity=.9] (0,0) rectangle (5,5);
+    \draw[black, dashed, ultra thick] (0,0) rectangle (5,5);
+    \node[anchor=south, inner sep = 0]  at (2.5,0) {\includegraphics[width=4.5cm]{ion64.png}};
+  \end{scope}
+
+  \begin{scope}[xshift=12cm]
+    \fill[white,fill opacity=.9] (0,0) rectangle (5,5);
+    \draw[black, dashed, ultra thick] (0,0) rectangle (5,5);
+    \node[anchor=south, inner sep = 0]  at (2.5,0) {\includegraphics[width=4.5cm]{bgiseq64.png}};
+  \end{scope}
+
+  \begin{scope}[xshift=18cm]
+    \fill[white,fill opacity=0.6] (0,0) rectangle (5,5);
+    \draw[black, dashed, ultra thick] (0,0) rectangle (5,5);
+    \node[anchor=south, inner sep = 0]  at (2.5,0) {\includegraphics[width=4.5cm]{minion64.png}};
+
+  \end{scope}
+
+ 
+\end{tikzpicture}
+
+\end{document}

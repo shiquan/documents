@@ -1,0 +1,34 @@
+\documentclass[tikz, 12pt]{standalone}
+
+\usepackage{xcolor}
+\definecolor{colora}{RGB}{214,76,71}
+\definecolor{colorg}{RGB}{84,175,216}
+\definecolor{colort}{RGB}{98,174,17}
+\definecolor{colorc}{RGB}{253,205,103}
+\definecolor{colorn}{RGB}{ 45,45,45}
+\definecolor{colord}{RGB}{ 44,46,255}
+\definecolor{colorb}{RGB}{ 14,41,89}
+\definecolor{colori}{RGB}{255,44,45}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,shadows,calc,decorations.pathreplacing}
+
+\pgfmathdeclarerandomlist{randomColors}{
+  {colora}
+  {colorc}
+  {colorg}
+  {colort}
+}
+
+\begin{document}
+\pgfmathsetseed{10}
+\begin{tikzpicture}
+  \foreach \d in {0, ..., 10} 
+  \foreach \x in {0, ..., 10 }
+  \pgfmathrandomitem{\nucl}{randomColors} 
+  \shade[circle, outer color = \nucl, inner color = \nucl!20, thick, draw=black] (\x, \d) circle(0.5);
+
+\end{tikzpicture}
+
+\end{document}
+

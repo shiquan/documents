@@ -1,0 +1,58 @@
+\documentclass[tikz, 12pt]{standalone}
+
+\usepackage{xcolor}
+\definecolor{colora}{RGB}{214,76,71}
+\definecolor{colorg}{RGB}{84,175,216}
+\definecolor{colort}{RGB}{98,174,17}
+\definecolor{colorc}{RGB}{253,205,103}
+\definecolor{colorn}{RGB}{ 45,45,45}
+\definecolor{colord}{RGB}{ 44,46,255}
+\definecolor{colorb}{RGB}{ 14,41,89}
+\definecolor{colori}{RGB}{255,44,45}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,shadows,calc,decorations.pathreplacing}
+
+\tikzstyle{blockA} = [fill=colora, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockC} = [fill=colorc, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockG} = [fill=colorg, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockT} = [fill=colort, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockN} = [fill=colorn, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockd} = [fill=colord, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blockb} = [fill=colorb, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{blocki} = [fill=colori, draw=black, ultra thick, rounded corners, drop shadow]
+
+\pgfmathdeclarerandomlist{randomColors}{
+  {colora}
+  {colorc}
+  {colorg}
+  {colort}
+}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \foreach \x in {0, 0.5, ..., 5 }
+  \shade[circle, outer color = colorn, inner color = colorn!20, thick, draw=black] (\x,2-\x*2*0.2) circle(0.25);
+  \foreach \x in {5.5, 6, ..., 12.5 }
+   \pgfmathrandomitem{\nucl}{randomColors} 
+   \shade[circle, outer color = \nucl, inner color = \nucl!20, thick, draw=black] (\x, 0) circle(0.25);
+   \foreach \x in {13, 13.5, ..., 20 }
+  \shade[circle, outer color = colorn, inner color = colorn!20, thick, draw=black] (\x, 0) circle(0.25);
+   \foreach \x in {20.5, 21, ..., 27.5 }
+   \pgfmathrandomitem{\nucl}{randomColors}
+   \shade[circle, outer color = \nucl, inner color = \nucl!20, thick, draw=black] (\x, 0) circle(0.25);
+   \foreach \x in {0, 0.5, ..., 5}
+   \shade[circle, outer color = colorn, inner color = colorn!20, thick, draw=black] (\x+28, \x*2*0.2) circle(0.25);
+
+  \draw[decorate,decoration={brace,mirror,raise=10,amplitude=20}, ultra thick, draw=black] (0, 2) -- (5, 0) node [midway,below,sloped,yshift=-30,xshift=-10]{\bfseries{\large{adaptor, barcode sequences}}};
+
+  \draw[decorate,decoration={brace,mirror,raise=10,amplitude=20}, ultra thick, draw=black] (5.5, 0) -- (27.5, 0) node [midway,below,sloped,yshift=-30,xshift=-10]{\bfseries{\large{insert size}}};
+
+  \draw[->, blue,ultra thick] (0,2.5) -- (5,0.5) -- (12.5,0.5);
+  \draw[->, blue,ultra thick] (33,2.5) -- (28,0.5) -- (20.5,0.5); 
+
+\end{tikzpicture}
+
+\end{document}
+
