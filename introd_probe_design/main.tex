@@ -1,0 +1,114 @@
+\documentclass[12pt]{beamer}
+
+\usepackage{pdfpages}
+\usepackage{xeCJK}
+\setCJKmainfont{STHeiti}
+\setCJKsansfont{STKaiti}
+\newcommand{\kaiti}{\fontfamily{STKaiti}\selectfont}
+\newcommand{\heiti}{\fontfamily{STHeiti}\selectfont}
+
+\usepackage{inputenc}
+\usepackage{varwidth}
+\usepackage{xcolor}
+\definecolor{colora}{RGB}{214,76,71}
+\definecolor{colorg}{RGB}{84,175,216}
+\definecolor{colort}{RGB}{98,174,17}
+\definecolor{colorc}{RGB}{253,205,103}
+\definecolor{colorn}{RGB}{ 45,45,45}
+\definecolor{colord}{RGB}{ 44,46,255}
+\definecolor{colorb}{RGB}{ 14,41,89}
+\definecolor{colori}{RGB}{255,44,45}
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+\definecolor{backg}{RGB}{30, 60, 150}
+
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,backgrounds,shadows,decorations.pathreplacing,decorations.pathmorphing}
+\tikzstyle{every picture}+=[remember picture]
+\tikzstyle{na} = [baseline=-.5ex]
+\tikzstyle{block} = [ultra thick, align=left, rounded corners, drop shadow, draw=black, fill=colorn,text=white]
+\tikzstyle{refbg} = [rounded corners, text width=\textwidth, fill=beaublue]
+
+\tikzstyle{elec} = [line width=2pt,draw=black!80]
+\tikzstyle{vib} = [thick,draw=black!30]
+\tikzstyle{relax} = [draw=orange,ultra thick,decorate,decoration=snake]
+
+\tikzstyle{blockA} = [fill=colora, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockC} = [fill=colorc, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockG} = [fill=colorg, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockT} = [fill=colort, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockN} = [fill=colorn, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockd} = [fill=colord, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blockb} = [fill=colorb, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+\tikzstyle{blocki} = [fill=colori, draw=black, ultra thick, rounded corners, drop shadow,text=white]
+
+\tikzstyle{circleA} = [circle, inner color = colora!20, outer color=colora, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleC} = [circle, inner color = colorc!20, outer color=colorc, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleG} = [circle, inner color = colorg!20, outer color=colorg, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleT} = [circle, inner color = colort!20, outer color=colort, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleN} = [circle, inner color = colorn!20, outer color=colorn, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circled} = [circle, inner color = colord!20, outer color=colord, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circleb} = [circle, inner color = colorb!20, outer color=colorb, draw=black, ultra thick, rounded corners, drop shadow]
+\tikzstyle{circlei} = [circle, inner color = colori!20, outer color=colori, draw=black, ultra thick, rounded corners, drop shadow]
+
+\pgfmathdeclarerandomlist{randomColors}{
+  {colora}
+  {colorc}
+  {colorg}
+  {colort}
+}
+
+\pgfmathdeclarerandomlist{randomBlocks}{
+  {blockA}
+  {blockC}
+  {blockG}
+  {blockT}
+}
+
+\usepackage{tcolorbox}
+\usepackage{listings}
+
+%\setbeamertemplate{sections in toc}[circle]
+\usetheme{Frankfurt}
+\usecolortheme[named=backg]{structure}
+\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{itemize items}[triangle]
+
+\setbeamertemplate{footline}{
+\includegraphics[height=1.5em]{figures/copyright.png}
+    \hfill
+    \insertframenumber
+    /
+    \inserttotalframenumber
+    \hspace{0.1cm}
+}
+
+
+
+\title{\huge{探针设计技术基础}}
+\author{\large{石\ 泉}\\shiquan@genomics.cn\\https://github.com/shiquan}
+\date{\today}
+\begin{document}
+\begin{frame}\frametitle{Human genome reference}
+
+\end{frame}
+
+\begin{frame}\frametitle{探针设计基本原理}
+  \end{frame}
+
+\begin{frame}\frametitle{重复区域判断}
+  \end{frame}
+
+\begin{frame}\frametitle{探针长度对捕获效率的影响}
+  \end{frame}
+
+\begin{frame}\frametitle{探针密度对捕获深度的影响}
+  \end{frame}
+
+\begin{frame}\frametitle{测序平台对捕获数据深度覆盖度的影响}
+\end{frame}
+
+\begin{frame}\frametitle{Bubble primer捕获原理介绍}
+  \end{frame}
+
+\end{document}
